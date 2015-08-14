@@ -24,6 +24,6 @@ public class StoolDashboardWidget extends AbstractRubyTemplate implements RubyRa
 
     @Override
     protected String getTemplatePath() {
-        return "stoolwidget.html.erb";
+        return "/stoolwidget.html.erb";
     }
 }

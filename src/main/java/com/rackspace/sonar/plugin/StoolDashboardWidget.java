@@ -1,29 +1,29 @@
 package com.rackspace.sonar.plugin;
 
-import org.sonar.api.web.Dashboard;
-import org.sonar.api.web.DashboardTemplate;
-import org.sonar.api.web.RubyRailsWidget;
-import org.sonar.api.web.Widget;
+import org.sonar.api.web.*;
 
+@WidgetProperties({
+        @WidgetProperty(key = "responsetime",
+                description = "Average Response Time ",
+                optional = false
+        )
+})
 /**
  * Created by dimi5963 on 8/14/15.
  */
-public class StoolDashboardWidget extends DashboardTemplate implements Widget {
-    @Override
-    public Dashboard createDashboard() {
-        return null;
-    }
-
-    @Override
-    public String getName() {
-        return null;
-    }
+public class StoolDashboardWidget extends AbstractRubyTemplate implements RubyRailsWidget {
 
     public String getId() {
-        return null;
+        return "Stool";
     }
 
     public String getTitle() {
-        return null;
+
+        return "Stool";
+    }
+
+    @Override
+    protected String getTemplatePath() {
+        return "stoolwidget.html.erb";
     }
 }
